@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main class="container">
+            <h1>TapTest</h1>
+            <p class="subtitle">Press any key on your keyboard to test it</p>
+            <div class="controls">
+                <button id="themeButton">Light Mode</button>
+                <button id="resetButton">Reset</button>
+            </div>
+            <section class="info">
+                <p>Key: <span id="keyName">None</span></p>
+                <p>Code: <span id="keyCode">None</span></p>
+                <p>Event Code: <span id="eventCode">None</p>
+            </section>
+            <section class="progress-section">
+                <p>Keys tested: <span id="testedCount">0</span>/<span id="totalCount">0</span></p>
+                <div class="progress-bar">
+                    <div id="progressFill"></div>
+                </div>
+                <p id="progressText">Start pressing keys to test your keyboard!</p>
+            </section>
+            <div class="keyboard">
+                <div class="keyboard-layout">
+                    <div class="main-keys">
+                        <div class="row function-row">
+                            <button class="key" data-code="Escape">Esc</button>
+                            <button class="key" data-code="F1">F1</button>
+                            <button class="key" data-code="F2">F2</button>
+                            <button class="key" data-code="F3">F3</button>
+                            <button class="key" data-code="F4">F4</button>
+                            <button class="key" data-code="F5">F5</button>
+                            <button class="key" data-code="F6">F6</button>
+                            <button class="key" data-code="F7">F7</button>
+                            <button class="key" data-code="F8">F8</button>
+                            <button class="key" data-code="F9">F9</button>
+                            <button class="key" data-code="F10">F10</button>
+                            <button class="key" data-code="F11">F11</button>
+                            <button class="key" data-code="F12">F12</button>
+                        </div>
+                        <div class="row">
+                            <button class="key" data-code="Backquote">`~</button>
+                            <button class="key" data-code="Digit1">1 !</button>
+                            <button class="key" data-code="Digit2">2 @</button>
+                            <button class="key" data-code="Digit3">3 #</button>
+                            <button class="key" data-code="Digit4">4 $</button>
+                            <button class="key" data-code="Digit5">5 %</button>
+                            <button class="key" data-code="Digit6">6 ^</button>
+                            <button class="key" data-code="Digit7">7 &amp;</button>
+                            <button class="key" data-code="Digit8">8 *</button>
+                            <button class="key" data-code="Digit9">9 (</button>
+                            <button class="key" data-code="Digit0">0 )</button>
+                            <button class="key" data-code="Minus">- _</button>
+                            <button class="key" data-code="Equal">= +</button>
+                            <button class="key wide" data-code="Backspace">Backspace</button>
+                        </div>
+                        <div class="row">
+                            <button class="key wide" data-code="Tab">Tab</button>
+                            <button class="key" data-code="KeyQ">Q</button>
+                            <button class="key" data-code="KeyW">W</button>
+                            <button class="key" data-code="KeyE">E</button>
+                            <button class="key" data-code="KeyR">R</button>
+                            <button class="key" data-code="KeyT">T</button>
+                            <button class="key" data-code="KeyY">Y</button>
+                            <button class="key" data-code="KeyU">U</button>
+                            <button class="key" data-code="KeyI">I</button>
+                            <button class="key" data-code="KeyO">O</button>
+                            <button class="key" data-code="KeyP">P</button>
+                            <button class="key" data-code="BracketLeft">[ {</button>
+                            <button class="key" data-code="BracketRight">] }</button>
+                            <button class="key" data-code="Backslash">\ |</button>
+                        </div>
+                        <div class="row">
+                            <button class="key extra-wide" data-code="CapsLock">Caps Lock</button>
+                            <button class="key" data-code="KeyA">A</button>
+                            <button class="key" data-code="KeyS">S</button>
+                            <button class="key" data-code="KeyD">D</button>
+                            <button class="key" data-code="KeyF">F</button>
+                            <button class="key" data-code="KeyG">G</button>
+                            <button class="key" data-code="KeyH">H</button>
+                            <button class="key" data-code="KeyJ">J</button>
+                            <button class="key" data-code="KeyK">K</button>
+                            <button class="key" data-code="KeyL">L</button>
+                            <button class="key" data-code="Semicolon">; :</button>
+                            <button class="key" data-code="Quote">' "</button>
+                            <button class="key extra-wide" data-code="Enter">Enter</button>
+                        </div>
+                        <div class="row">
+                            <button class="key extra-wide" data-code="ShiftLeft">Shift</button>
+                            <button class="key" data-code="KeyZ">Z</button>
+                            <button class="key" data-code="KeyX">X</button>
+                            <button class="key" data-code="KeyC">C</button>
+                            <button class="key" data-code="KeyV">V</button>
+                            <button class="key" data-code="KeyB">B</button>
+                            <button class="key" data-code="KeyN">N</button>
+                            <button class="key" data-code="KeyM">M</button>
+                            <button class="key" data-code="Comma">, &lt;</button>
+                            <button class="key" data-code="Period">. &gt;</button>
+                            <button class="key" data-code="Slash">/ ?</button>
+                            <button class="key extra-wide" data-code="ShiftRight">Shift</button>
+                        </div>
+                        <div class="row">
+                            <button class="key wide" data-code="ControlLeft">Ctrl</button>
+                            <button class="key wide" data-code="MetaLeft">Win</button>
+                            <button class="key wide" data-code="AltLeft">Alt</button>
+                            <button class="key space" data-code="Space">Space</button>
+                            <button class="key wide" data-code="AltRight">Alt</button>
+                            <button class="key wide" data-code="MetaRight">Win</button>
+                            <button class="key wide" data-code="ContextMenu">Menu</button>
+                            <button class="key wide" data-code="ControlRight">Ctrl</button>
+                        </div>
+                    </div>
+                    <div class="side-keys">
+                        <div class="nav-group">
+                            <div class="row">
+                                <button class="key" data-code="PrintScreen">PrtSc</button>
+                                <button class="key" data-code="ScrollLock">ScrLk</button>
+                                <button class="key" data-code="Pause">Pause</button>
+                            </div>
+                            <div class="row">
+                                <button class="key" data-code="Delete">Delete</button>
+                                <button class="key" data-code="End">End</button>
+                                <button class="key" data-code="PageDown">PgDn</button>
+                            </div>
+                            <div class="arrow-area">
+                                <div></div>
+                                <button class="key" data-code="ArrowUp">↑</button>
+                                <div></div>
+                                <button class="key" data-code="ArrowLeft">←</button>
+                                <button class="key" data-code="ArrowDown">↓</button>
+                                <button class="key" data-code="ArrowRight">→</button>
+                            </div>
+                        </div>
+                        <div class="numpad">
+                            <div class="row">
+                                <button class="key" data-code="NumLock">Num</button>
+                                <button class="key" data-code="NumpadDivide">/</button>
+                                <button class="key" data-code="NumpadMultiply">*</button>
+                                <button class="key" data-code="NumpadSubtract">-</button>
+                            </div>
+                            <div class="row">
+                                <button class="key" data-code="Numpad7">7</button>
+                                <button class="key" data-code="Numpad8">8</button>
+                                <button class="key" data-code="Numpad9">9</button>
+                                <button class="key" data-code="NumpadAdd">+</button>
+                            </div>
+                            <div class="row">
+                                <button class="key" data-code="Numpad4">4</button>
+                                <button class="key" data-code="Numpad5">5</button>
+                                <button class="key" data-code="Numpad6">6</button>
+                                <div class="empty-key"></div>
+                            </div>
+                            <div class="row">
+                                <button class="key" data-code="Numpad1">1</button>
+                                <button class="key" data-code="Numpad2">2</button>
+                                <button class="key" data-code="Numpad3">3</button>
+                                <button class="key tall" data-code="NumpadEnter">Enter</button>
+                            </div>
+                            <div class="row">
+                                <button class="key num-zero" data-code="Numpad0">0</button>
+                                <button class="key" data-code="NumpadDecimal">.</button>
+                                <div class="empty-key"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="history-section">
+                <h2>Key Press History</h2>
+                <p class="subtitle">Last 10 key presses</p>
+                <ol id="history">
+                    <li>No keys pressed yet</li>
+                </ol>
+            </section>
+            <section class="legend">
+                <span><span class="legend-color untested-color"></span>Not Tested</span>
+                <span><span class="legend-color tested-color"></span>Tested</span>
+                <span><span class="legend-color pressed-color"></span>Pressed</span>
+            </section>
+            <p class="hint">
+                Press and hold keys to test. Release to see the tested color.
+            </p>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
